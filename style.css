@@ -30,7 +30,7 @@
 }
 
 body {
-  background-color: rgb(34, 29, 29);
+  background-color: rgb(19, 18, 18);
 }
 
 .keypad-container {
@@ -214,5 +214,36 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 758px) {
+  .keypad-container {
+    max-width: 90%;
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+
+  .keypad-title {
+    font-size: 1.2rem;
+  }
+
+  .keypad-display .slot {
+    font-size: 1.5rem;
+    min-width: 20px;
+  }
+
+  .keypad-buttons {
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .btn-key {
+    padding: 12px 0;
+    font-size: 1.1rem;
+  }
+
+  .btn-action {
+    font-size: 0.75rem;
   }
 }
