@@ -158,13 +158,13 @@ body {
 }
 
 .reward-box {
-  background-color: rgba(139, 0, 0, 0.15);
-  border: 1px solid var(--accent-crimson);
+  background-color: rgba(8, 252, 65, 0.15);
+  border: 1px solid green;
   border-radius: 6px;
   padding: 20px;
   text-align: center;
   width: 100%;
-  box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+  box-shadow: 0 0 15px green;
   animation: fadeIn 0.4s ease-in-out;
 }
 
@@ -180,6 +180,7 @@ body {
   color: var(--text-main);
   font-size: 0.85rem;
   margin: 0;
+  font-family: var(--font-mono);
 }
 
 .shake {
