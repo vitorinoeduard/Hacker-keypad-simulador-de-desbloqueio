@@ -187,6 +187,43 @@ body {
   animation: shakeAnimation 0.4s ease-in-out;
 }
 
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    font-family: var(--font-mono);
+    color: var(--accent-silver);
+    font-size: 0.9em;
+
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer-links a {
+    color: var(--accent-silver);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid var(--accent-silver);
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+    background-color: var(--accent-crimson);
+    border-color: var(--accent-crimson);
+    color: #fff;
+}
+
 @keyframes shakeAnimation {
 
   0%,
@@ -245,5 +282,9 @@ body {
 
   .btn-action {
     font-size: 0.75rem;
+  }
+  .footer {
+    font-size: 0.8em;
+    margin-top: auto;
   }
 }
