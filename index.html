@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Keypad: Simulador de Desbloqueio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="keypad-container">
+        <h2 class="keypad-title">Terminal de segurança</h2>
+
+        <div id="keypad-display" class="keypad-display">
+            <span class="slot">_</span>
+            <span class="slot">_</span>
+            <span class="slot">_</span>
+            <span class="slot">_</span>
+        </div>
+
+        <p id="keypad-status" class="keypad-status">INSIRA O CÓDIGO DE ACESSO</p>
+
+        <div id="keypad-buttons" class="keypad-buttons">
+            <button type="button" class="btn-key" data-key="1">1</button>
+            <button type="button" class="btn-key" data-key="2">2</button>
+            <button type="button" class="btn-key" data-key="3">3</button>
+            <button type="button" class="btn-key" data-key="4">4</button>
+            <button type="button" class="btn-key" data-key="5">5</button>
+            <button type="button" class="btn-key" data-key="6">6</button>
+            <button type="button" class="btn-key" data-key="7">7</button>
+            <button type="button" class="btn-key" data-key="8">8</button>
+            <button type="button" class="btn-key" data-key="9">9</button>
+            <button type="button" class="btn-key btn-action" id="btn-del">DEL</button>
+            <button type="button" class="btn-key" data-key="0">0</button>
+            <button type="button" class="btn-key btn-action" id="btn-enter">ENTER</button>
+        </div>
+
+        <div id="reward-box" class="reward-box hidden">
+            <p>SISTEMA DESBLOQUEADO</p>
+            <p>Relíquia lendária resgatada com sucesso!</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+:root {
+  --bg-dark: #000000;
+  --bg-panel: #080707;
+  --text-main: #e0e0e0;
+  --accent-crimson: #8b0000;
+  --accent-silver: #c0c0c0;
+  --accent-red: #A50000;
+  --font-main: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+  --font-title: 'Rajdhani', cursive;
+  --font-subtitle: 'rajdhani_semiBold', cursive;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/fonts/Rajdhani/Rajdhani-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/static/Inter_18pt-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(34, 29, 29);
+}
+
+.keypad-container {
+  background-color: var(--bg-panel);
+  border: 1px solid #333;
+  border-top: 4px solid var(--accent-crimson);
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 380px;
+  width: 100%;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.keypad-title {
+  color: var(--accent-silver);
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.keypad-display {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: var(--bg-dark);
+  padding: 15px 25px;
+  border: 1px solid #222;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.keypad-display .slot {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-red);
+  min-width: 25px;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(165, 0, 0, 0.7);
+}
+
+.keypad-status {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #777;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  min-height: 18px;
+  margin: 0;
+}
+
+.keypad-status.error {
+  color: var(--accent-red);
+  text-shadow: 0 0 6px rgba(165, 0, 0, 0.6);
+}
+
+.keypad-status.success {
+  color: #00ff66;
+  text-shadow: 0 0 6px rgba(0, 255, 102, 0.6);
+}
+
+.keypad-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.btn-key {
+  background-color: #121111;
+  border: 1px solid #2a2a2a;
+  color: var(--text-main);
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  padding: 16px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-key:hover {
+  border-color: var(--accent-red);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(165, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-key:active {
+  transform: scale(0.95);
+  background-color: var(--accent-crimson);
+}
+
+.btn-action {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+#btn-del {
+  color: #888;
+}
+
+#btn-del:hover {
+  border-color: #ff4444;
+  color: #ff4444;
+}
+
+#btn-enter {
+  color: var(--accent-silver);
+}
+
+#btn-enter:hover {
+  border-color: var(--accent-red);
+}
+
+.reward-box {
+  background-color: rgba(139, 0, 0, 0.15);
+  border: 1px solid var(--accent-crimson);
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.reward-box h3 {
+  color: #00ff66;
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin: 0 0 8px 0;
+}
+
+.reward-box p {
+  color: var(--text-main);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.shake {
+  animation: shakeAnimation 0.4s ease-in-out;
+}
+
+@keyframes shakeAnimation {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-8px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
