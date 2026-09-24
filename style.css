@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'Rajdhani';
-  src: url('./fonts/Rajdhani/Rajdhani-Medium.ttf') format('truetype');
+  src: url('./fonts/Rajdhani/Rajdhani-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -111,7 +111,7 @@ body {
   border: 1px solid #2a2a2a;
   color: var(--text-main);
   font-family: 'Rajdhani', sans-serif !important;
-  font-weight: bold !important;
+  font-weight: normal !important;
   font-size: 1.3rem;
   padding: 16px 0;
   border-radius: 8px;
